@@ -15,10 +15,7 @@ function App() {
                     <Form />
                 </Column>
                 <Column type="image">
-                    <Image
-                        sources={"illustration-sign-up-mobile.svg, /illustration-sign-up-desktop.svg"}
-                        alt={"Graphical abstarct image"}
-                    />
+                    <Image url={"/illustration-sign-up-desktop.svg"} alt={"Graphical abstarct image"} />
                 </Column>
             </Newsletter>
             {/* <Message /> */}
@@ -87,15 +84,15 @@ function Icon({ url }) {
     return <img src={url} alt="" />;
 }
 
-function Image({ sources, alt = "" }) {
-    const sourceSet = sources
-        .split(",")
-        .map((sources, idx) => {
-            return sources + ` 60${idx}w`;
-        })
-        .join(",");
+function Image({ url, alt = "" }) {
+    // const sourceSet = sources
+    //     .split(",")
+    //     .map((sources, idx) => {
+    //         return sources + ` 60${idx}w`;
+    //     })
+    //     .join(",");
 
-    return <img className="image splash" srcSet={sourceSet} alt={alt} />;
+    return <img className="image splash" src={url} alt={alt} />;
 }
 
 function Spinner() {
