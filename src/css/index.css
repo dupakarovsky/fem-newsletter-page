@@ -1,5 +1,20 @@
 /** BASE SELECTORS  */
 
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
 body {
+    --clr-tomato: 4 100% 67%; /*hsl(4, 100%, 67%)*/
+    --clr-pinky: 346 100% 66%; /*hsl(346, 100%, 66%)*/
+    --clr-slate: 234 29% 20%; /*hsl(234, 29%, 20%);*/
+    --clr-charcol: 235 18% 26%; /*hsl(235, 18%, 26%)*/
+    --clr-grey: 231 7% 60%; /*hsl(231, 7%, 60%)*/
+    --clr-white: 0 0% 95%; /*hsl(0, 0%, 95%)*/
+    --clr-black: 0 0% 10%; /*hsl(0, 0%, 10%)*/
+
+    display: grid;
+    place-content: center;
+
+    font-family: "Roboto";
+    background-color: hsl(var(--clr-slate));
     padding: 1.5rem;
 }

@@ -1,0 +1,122 @@
+.newsletter {
+    display: grid;
+    grid-template-columns: minmax(23rem, 1fr) auto;
+    align-items: center;
+
+    background-color: hsl(var(--clr-white));
+    color: hsl(var(--clr-slate));
+    border-radius: 40px;
+    box-shadow: 0 10px 40px 20px hsl(var(--clr-black) / 0.25);
+    overflow: hidden;
+
+    @media (width < 600px) {
+        grid-template-columns: auto;
+        grid-auto-flow: row;
+        border-radius: 5px;
+    }
+}
+
+.column {
+    padding: 1.5rem;
+}
+.column.image {
+    width: 100%;
+    @media (width < 600px) {
+        grid-row: 1;
+
+        display: grid;
+        padding: 0;
+    }
+}
+.column.content {
+    @media (width < 600px) {
+        grid-row: 2;
+
+        padding: 0;
+    }
+}
+
+.image.splash {
+    @media (width < 600px) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.content {
+    padding: 2.5rem;
+    padding-block-end: 0;
+}
+.content-title {
+    font-size: clamp(2.6rem, 3.5vw + 1rem, 3.6rem);
+    margin-block-end: 1rem;
+}
+.content-text {
+    margin-block-end: 1rem;
+    max-inline-size: 40ch;
+}
+.content-list,
+.content-item {
+    list-style: none;
+}
+.content-item {
+    display: flex;
+
+    margin-block-end: 0.75rem;
+
+    & > *:first-child {
+        margin-inline-end: 1rem;
+    }
+}
+
+.form {
+    display: grid;
+
+    padding: 2.5rem;
+    padding-block-start: 0;
+}
+.form-input-wrapper {
+    display: grid;
+}
+
+.form-label {
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-block-end: 0.5rem;
+}
+.form-input {
+    background-color: transparent;
+    padding: 1rem;
+    border: 1px solid hsl(var(--clr-grey));
+    border-radius: 8px;
+    color: hsl(var(--clr-slate));
+    margin-block-end: 1.5rem;
+
+    &:focus {
+        border: 1px solid hsl(var(--clr-slate));
+        outline: 2px solid hsl(var(--clr-charcol) / 0.5);
+        outline-offset: 2px;
+    }
+}
+
+.btn {
+    font-weight: 700;
+    color: hsl(var(--clr-white));
+    background-color: hsl(var(--clr-slate));
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: transparent;
+        background: linear-gradient(to right, hsl(var(--clr-pinky)) 25%, hsl(var(--clr-tomato)));
+        box-shadow: 0 20px 20px 5px hsl(var(--clr-tomato) / 0.25);
+    }
+
+    &:focus {
+        outline: 2px solid hsl(var(--clr-charcol) / 0.5);
+        outline-offset: 2px;
+    }
+}
