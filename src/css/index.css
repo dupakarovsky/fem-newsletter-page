@@ -17,6 +17,7 @@ body {
     font-family: "Roboto";
     background-color: hsl(var(--clr-slate));
     padding: 1.5rem;
+    overflow: hidden;
 
     @media (width < 600px) {
         padding: clamp(0rem, 0.25vw, 1.5rem);
